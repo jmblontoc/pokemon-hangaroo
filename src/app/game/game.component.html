@@ -1,0 +1,22 @@
+<div *ngIf="currentPokemon" id="main">
+    <h3>LEVEL: {{ level }}</h3>
+    <p>Hint: <span *ngFor="let type of currentPokemon.type" class="type">{{ type }}</span></p>
+
+    <div id="boxes">
+        <div *ngFor="let letter of currentPokemon.nameArray">
+            {{ !letter.is_hidden ? letter.char : '' }}
+        </div>
+    </div>
+
+    <div id="chosen-letters">
+        <p>Chosen Letters: <span *ngFor="let letter of chosenLetters" class="chosen-letters">{{ letter }}</span></p>
+
+    </div>
+
+    <div id="wrongs">
+        <span *ngFor="let i of [].constructor(wrongs)">
+            X
+        </span>
+        <p *ngIf="isGameOver()">GAME IS OVER.</p>
+    </div>
+</div>

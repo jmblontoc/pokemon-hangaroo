@@ -1,0 +1,33 @@
+$dimension: 25px;
+div#main {
+    span.type {
+        margin: 0.5rem;
+    }
+    div#boxes {
+        display: flex;
+        div {
+            height: $dimension;
+            width: $dimension;
+            line-height: $dimension;
+            border: solid 0.5px #000;
+            margin: 0.4rem;
+            text-align: center;
+        }
+    }
+    div#wrongs {
+        color: red;
+        span {
+            margin: 0.1rem;
+            font-weight: 600;
+        }
+    }
+    div#chosen-letters {
+        .chosen-letters {
+            margin: 0.2rem;
+        }
+    }
+}
+
+* {
+    font-family: sans-serif;
+}
